@@ -1,16 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  FaHome,
-  FaShoppingCart,
-  FaUser,
-  FaBars,
-  FaBell,
-  FaSearch,
-  FaEdit,
-  FaTrash,
-  FaPlus,
-} from "react-icons/fa";
+import { FaHome, FaShoppingCart, FaUser, FaBars, FaBell, FaSearch, FaEdit, FaTrash, FaPlus, } from "react-icons/fa";
 import "./Profile.css";
 
 interface Product {
