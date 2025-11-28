@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaHome, FaShoppingCart, FaUser, FaBars, FaBell, FaSearch } from "react-icons/fa";
+import { FaHome, FaShoppingCart, FaUser, FaBars, FaSearch } from "react-icons/fa";
 import "./Dashboard.css";
 
 interface Product {
@@ -8,7 +8,7 @@ interface Product {
   name: string;
   price: number;
   stock: number;
-  image: string; // added for image URL
+  image: string; 
 }
 
 const Dashboard: React.FC = () => {
@@ -17,7 +17,6 @@ const Dashboard: React.FC = () => {
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
-  // 10 example products
   const [products] = useState<Product[]>([
     { id: 1, name: "Laptop", price: 45000, stock: 10, image: "https://via.placeholder.com/150?text=Laptop" },
     { id: 2, name: "Smartphone", price: 25000, stock: 15, image: "https://via.placeholder.com/150?text=Smartphone" },
@@ -57,7 +56,6 @@ const Dashboard: React.FC = () => {
               <FaSearch />
               <input type="text" placeholder="Search products..." />
             </div>
-            <FaBell className="notification-icon" />
           </div>
         </header>
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FaHome, FaShoppingCart, FaUser, FaBars, FaBell, FaSearch, FaEdit, FaTrash, FaPlus, } from "react-icons/fa";
+import { FaHome, FaShoppingCart, FaUser, FaBars, FaSearch, FaEdit, FaTrash, FaPlus, FaBoxOpen, FaDollarSign, FaChartLine } from "react-icons/fa";
 import "./Profile.css";
 
 interface Product {
@@ -81,43 +81,46 @@ const Profile: React.FC = () => {
               <FaSearch />
               <input type="text" placeholder="Search products..." />
             </div>
-            <FaBell className="notification-icon" />
           </div>
         </header>
 
         {/* User Profile Info */}
-        <section className="profile-info">
-          <div className="profile-card">
-            <img
-              className="profile-avatar"
-              src="https://via.placeholder.com/120?text=Avatar"
-              alt="User Avatar"
-            />
-            <div className="profile-details">
-              <h2>John Doe</h2>
-              <p>Name: Jamaiah Shane Cabigas</p>
-              <p>Email: johndoe@example.com</p>
-            </div>
-          </div>
-        </section>
+<section className="profile-info">
+  <div className="profile-card">
+    <div className="profile-avatar-wrapper">
+      <img className="profile-avatar" src="https://via.placeholder.com/120?text=Avatar" alt="User Avatar"/>
+    </div>
+    <div className="profile-details">
+      <h2>John Doe</h2>
+      <p><strong>Email:</strong> john@example.com</p>
+      <p><strong>Address:</strong> Valencia, Carcar City Cebu</p>
+      <p><strong>Zip Code:</strong> 6019</p>
+      <p><strong>Contact Number:</strong> 0905945422</p>
+    </div>
+  </div>
+</section>
 
         {/* Stats Cards */}
         <section className="profile-stats">
           <div className="stats-card">
+          <FaBoxOpen className="stats-icon" />
             <h3>Total Products</h3>
             <p>{totalProducts}</p>
           </div>
           <div className="stats-card">
+          <FaDollarSign className="stats-icon" />
             <h3>Total Revenue</h3>
-            <p>₱{totalRevenue}</p>
+            <p>₱ {totalRevenue}</p>
           </div>
           <div className="stats-card">
+          <FaShoppingCart className="stats-icon" />
             <h3>Total Orders</h3>
             <p>{totalOrders}</p>
           </div>
           <div className="stats-card">
+          <FaChartLine className="stats-icon" />
             <h3>Revenue / Order</h3>
-            <p>₱{revenuePerOrder.toFixed(2)}</p>
+            <p>₱ {revenuePerOrder.toFixed(2)}</p>
           </div>
         </section>
 
